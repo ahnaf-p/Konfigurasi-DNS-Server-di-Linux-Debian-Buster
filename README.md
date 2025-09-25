@@ -63,11 +63,13 @@
   
 # Pembahasan
   Saat mengonfigurasi DNS server di Debian, sering kali kita sudah merasa semua langkah benar, tapi ternyata pas diuji hasilnya error. Di sini kita akan melihat beberapa error yang paling sering muncul saat mengatur DNS server di Debian beserta penyebab dan cara mengatasinya.  
+    
 **1. Service BIND9 gagal start / restart**  
     ![](IMAGES/gagalrestar.png)  
       Error ini biasanya ada typo di file konfigurasi, untuk mengecek apa yang error kita bisa ketikan **systemctl status bind9** atau **journalctl -xe**. 
     ![](IMAGES/itu.png)  
       Nah kita bisa lihat, katanya errornya dari named.conf di line 14 bagian **master:**. Disini ternyata ada kesalahan penulisan atau typo yang harusnya master; malah master:. Untuk mengatasinya kita hanya perlu pergi ke named.conf lalu edit bagian salahnya, jangan lupa save.  
+        
 **2. Server Fail**  
     ![](IMAGES/domen.png)  
       Pada gambar diatas, terlihat saat restart baik-baik saja, namjun saat nslookup kedomain server fail, namun ke ip bisa. Nah ini juga biasanya ada kesalahan penulisan, karna ini gagal di domain berarti diantara named.conf dan db.penguin. Untuk mengatasinya cukup periksa file named.conf dan db.penguin, pastikan domainnya dikeduanya cocok. Jika sudah ketemu save dan restart.  
