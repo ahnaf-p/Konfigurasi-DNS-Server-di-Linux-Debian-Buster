@@ -5,7 +5,7 @@
   DNS (Domain Name System) bisa dibilang sebagai “buku telepon” internet. Dengan adanya DNS, kita tidak perlu repot mengingat alamat IP yang panjang untuk mengakses sebuah server, cukup dengan nama domain saja. Di Linux, khususnya Debian Buster (Debian 10), layanan DNS biasanya dijalankan menggunakan BIND9.  
   
 # Konfigurasi
-  Di sini saya mengunakan Debian 10 di Virtual Box. Untuk Networknya di adapter 1 mengunakan NAT, untuk mengakses internet dan mendownload repo yang dibutuhkan. Sebelum mulai kita bisa masuk ke root dan upgrade reponya dulu mengunakan  
+  Di sini saya mengunakan Debian 10 di Virtual Box. Untuk Networknya di adapter 1 mengunakan NAT, untuk mengakses internet dan mendownload repo yang dibutuhkan. Sebelum mulai kita bisa masuk ke root dan update reponya dulu mengunakan  
   
     apt update
   1. Pertama kita bisa menginstall **bind9, bind9utils dan dnsutils** lalu gunakan **-y** untuk otomatis menjawab "yes" tanpa konfirmasi lagi.  
