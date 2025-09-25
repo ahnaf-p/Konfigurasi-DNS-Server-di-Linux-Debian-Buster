@@ -75,4 +75,4 @@
       Pada gambar diatas, terlihat saat restart baik-baik saja, namjun saat nslookup kedomain server fail, namun ke ip bisa. Nah ini juga biasanya ada kesalahan penulisan, karna ini gagal di domain berarti diantara named.conf dan db.penguin. Untuk mengatasinya cukup periksa file named.conf dan db.penguin, pastikan domainnya dikeduanya cocok. Jika sudah ketemu save dan restart.  
 
 # Kesimpulan
-  Konfigurasi DNS server di Debian Buster dengan BIND9 memang membutuhkan perhatian pada detail kecil, mulai dari penulisan file zona, serial number di SOA, hingga pengaturan IP dan nameserver di client. Meski terlihat sederhana, kesalahan sekecil typo atau titik yang lupa bisa membuat server gagal merespon query atau menimbulkan error seperti Server Fail.  
+  Konfigurasi DNS server di Debian Buster dengan BIND9 memang membutuhkan perhatian pada detail kecil, mulai dari penulisan file zona hingga pengaturan IP dan nameserver di client. Meski terlihat sederhana, kesalahan sekecil typo atau titik yang lupa bisa membuat server gagal merespon query atau menimbulkan error seperti Server Fail.  
